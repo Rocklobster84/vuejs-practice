@@ -1,20 +1,20 @@
 const app = Vue.createApp({
  data() {
   return {
-   inputText: '',
-   liveName: '',
+   userInput: '',
+   confirmedInput: '',
   }
  },
  methods: {
   showAlert() {
-   alert('Here is my alert')
+   alert('Here is my alert');
   },
-  userIn(event) {
-   this.inputText = event.target.value;
+  saveInput(event) {
+   this.userInput = event.target.value;
   },
-  liveInput() {
-   this.liveName = this.inputText;
-  },
+  confirmInput() {
+   this.confirmedInput = this.userInput;
+  }
  }
 });
 
