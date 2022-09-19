@@ -8,6 +8,15 @@ const app = Vue.createApp({
     };
   },
   watch: {
+    counter(value) {
+      if (value > 50) {
+        const that = this;
+        setTimeout(function() {
+          that.counter = 0;
+        }, 2000);
+      }
+    },
+    // Demo of how to use as watcher
     /*name(value) {
       if (value === '') {
         this.fullname = '';
